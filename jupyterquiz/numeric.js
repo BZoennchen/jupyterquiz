@@ -1,3 +1,20 @@
+text_de = {
+    "numeric_label": "Geben Sie eine Zahl ein:",
+    "feedback_false": "Falsch."
+}
+
+text_en = {
+    "numeric_label": "Type numeric answer here:",
+    "feedback_false": "Incorrect -- try again."
+}
+
+if (language === "de") {
+    text = text_de;
+} else {
+    text = text_en;
+}
+
+
 function check_numeric(ths, event) {
 
     if (event.keyCode === 13) {
@@ -27,7 +44,7 @@ function check_numeric(ths, event) {
 
         var fb = document.getElementById("fb" + id);
         fb.style.display = "none";
-        fb.textContent = "Incorrect -- try again.";
+        fb.textContent = text["feedback_false"];
 
         var answers = JSON.parse(ths.dataset.answers);
         //console.log(answers);
@@ -207,7 +224,7 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 
     var lab = document.createElement("label");
     lab.className = "InpLabel";
-    lab.textContent = "Type numeric answer here:";
+    lab.textContent = text["numeric_label"];
     aDiv.append(lab);
 
     var inp = document.createElement("input");

@@ -1,18 +1,14 @@
 .Quiz {
-    max-width: 600px;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-    padding-bottom: 4px;
-    padding-top: 4px;
+    max-width: 800px;
+    margin-bottom: 5px;
     line-height: 1.1;
-    font-size: 16pt;
+    font-size: 1em;
     border-radius: inherit;
+    background: #ccc;
 }
 
 .QuizCode {
-    font-size: 14pt;
+    font-size: 1em;
     margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
@@ -23,7 +19,7 @@
 }
 
 .Answer {
-    margin: 10px 0;
+    margin: 10px 0 0 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
@@ -31,9 +27,9 @@
 }
 
 .Feedback {
-    font-size: 16pt;
+    font-size: 1.3em;
     text-align: center;
-    min-height: 2em;
+    min-height: 1.3em;
 }
 
 .Input {
@@ -51,12 +47,12 @@
     padding: 5px;
     padding-left: 10px;
     font-family: inherit;
-    font-size: 20px;
+    font-size: 1.3em;
     font-weight: inherit;
     line-height: 20pt;
     border: none;
     border-radius: 0.2rem;
-    transition: box-shadow 0.1s);
+    transition: box-shadow 0.1s;
 }
 
 .Input-text:focus {
@@ -112,7 +108,7 @@
     float: left;
     margin-right: 10px;
     color: var(--jq-numeric-input-label);
-    font-size: 15pt;
+    font-size: 1em;
 }
 
 .incorrect {

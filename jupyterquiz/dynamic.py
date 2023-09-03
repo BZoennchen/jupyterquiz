@@ -10,8 +10,8 @@ import sys
 
 
 def display_quiz(ref, num=1_000_000, shuffle_questions=False, shuffle_answers=True, preserve_responses=False,
-                 border_radius=10, question_alignment="left", max_width=600,
-                 colors = None ):
+                 border_radius=10, question_alignment="left", max_width=1000,
+                 colors = None, lang='en' ):
     '''
     Display an interactive quiz (currently multiple-choice or numeric answer)
     using a mix of Python and Javascript to support use in rendered notebooks
@@ -74,13 +74,13 @@ def display_quiz(ref, num=1_000_000, shuffle_questions=False, shuffle_answers=Tr
         '--jq-mc-button-border': '#e0e0e0e0',
         '--jq-mc-button-inset-shadow': '#555555',
         '--jq-many-choice-bg': '#f75c03ff',
-        '--jq-numeric-bg': '#392061ff',
-        '--jq-numeric-input-bg': '#c0c0c0',
+        '--jq-numeric-bg': '#5a5a5a',
+        '--jq-numeric-input-bg': '#606060',
         '--jq-numeric-input-label': '#101010',
         '--jq-numeric-input-shadow': '#999999',
         '--jq-incorrect-color': '#c80202',
-    '--jq-correct-color': '#009113',
-        '--jq-text-color': '#fafafa'
+        '--jq-correct-color': '#009113',
+        '--jq-text-color': '#cecece'
     }
     
     # Colors for Foundations of Data Science with Python
@@ -92,7 +92,7 @@ def display_quiz(ref, num=1_000_000, shuffle_questions=False, shuffle_answers=Tr
         '--jq-mc-button-inset-shadow': '#555555',
         '--jq-many-choice-bg': '#e26d5a',
         '--jq-numeric-bg': '#5bc0eb', #'#861657',
-        '--jq-numeric-input-bg': '#c0c0c0',
+        '--jq-numeric-input-bg': '#606060',
         '--jq-numeric-input-label': '#101010',
         '--jq-numeric-input-shadow': '#999999',
         '--jq-incorrect-color': '#666666',
@@ -130,6 +130,8 @@ def display_quiz(ref, num=1_000_000, shuffle_questions=False, shuffle_answers=Tr
 
 
     script = ''
+
+    script += f'var language="{lang}";'
 
 
     if isinstance(ref, list):

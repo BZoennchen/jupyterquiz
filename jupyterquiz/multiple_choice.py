@@ -8,7 +8,7 @@ def display_quiz_mc(question, answers, multiple=False, randomize=True,
 
     num_correct = 0
 
-    question_start = '''<div id="quizWrap" style="max-width: 600px; margin: 0 auto;">
+    question_start = '''<div id="quizWrap" style="max-width: 800px; margin: 0 auto;">
       <!-- QUESTION -->
       <div id="quizQn" style="padding: 20px;
       background: '''
