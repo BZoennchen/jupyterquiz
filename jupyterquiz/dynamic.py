@@ -73,7 +73,7 @@ def display_quiz(ref, num=1_000_000, shuffle_questions=False, shuffle_answers=Tr
         '--jq-mc-button-bg': '#fafafa',
         '--jq-mc-button-border': '#e0e0e0e0',
         '--jq-mc-button-inset-shadow': '#555555',
-        '--jq-many-choice-bg': '#f75c03ff',
+        '--jq-many-choice-bg': '#16f',
         '--jq-numeric-bg': '#5a5a5a',
         '--jq-numeric-input-bg': '#606060',
         '--jq-numeric-input-label': '#101010',

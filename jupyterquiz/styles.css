@@ -5,6 +5,7 @@
     font-size: 1em;
     border-radius: inherit;
     background: #ccc;
+    color: #000;
 }
 
 .QuizCode {
@@ -19,7 +20,7 @@
 }
 
 .Answer {
-    margin: 10px 0 0 10px;
+    margin: 10px 10px 0 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
